@@ -1,0 +1,69 @@
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+button {
+	line-height: 1.61em;
+	letter-spacing: 0.03em;
+	font-weight: 400;
+	width: 100%;
+	max-width: var(--mid);
+}
+
+h1 {
+	font-size: var(--g3);
+}
+
+h2,
+h3 {
+	font-size: var(--g2);
+}
+
+h4,
+h5 {
+	font-size: var(--g1);
+}
+
+p,
+a,
+button {
+	font-size: var(--g0);
+}
+
+a,
+button {
+	width: auto;
+	color: #f0ebe0;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.1s;
+	font-weight: 200;
+	font-style: italic;
+	mix-blend-mode: difference;
+}
+
+button {
+	background: transparent;
+	border: none;
+}
+
+a:hover,
+button:hover {
+	transform: skew(-3deg);
+	transform-origin: bottom left;
+	color: #b8bab5;
+}
+
+/* reusable typography */
+.bold {
+	font-weight: 900;
+}
+
+.small {
+	font-weight: 900;
+	font-size: var(--gs);
+}

@@ -1,0 +1,82 @@
+:root {
+	--max: 1240px;
+	--mid: 600px;
+	--min: 320px;
+
+	/* @link https://utopia.fyi/type/calculator?c=320,16,1.618,1240,20,1.618,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+	--gs: clamp(0.618rem, 0.5643rem + 0.2687vw, 0.7726rem);
+	--g0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+	--g1: clamp(1.618rem, 1.4773rem + 0.7035vw, 2.0225rem);
+	--g2: clamp(2.6179rem, 2.3903rem + 1.1382vw, 3.2724rem);
+	--g3: clamp(4.2358rem, 3.8675rem + 1.8417vw, 5.2948rem);
+	--g4: clamp(6.8535rem, 6.2576rem + 2.9798vw, 8.5669rem);
+	--g5: clamp(11.089rem, 10.1247rem + 4.8213vw, 13.8613rem);
+
+	--text: #0b1114;
+	--background: #f0ebe0;
+	--primary: #b8bab5;
+	--secondary: #d9dddc;
+	--accent: #fffafa;
+
+	cursor: default;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='light'] {
+	--text: #0b1114;
+	--background: #f0ebe0;
+	--primary: #b8bab5;
+	--secondary: #d9dddc;
+	--accent: #fffafa;
+}
+:root[data-theme='dark'] {
+	--text: #f0ebe0;
+	--background: #0b1114;
+	--primary: #b8bab5;
+	--secondary: #222625;
+	--accent: #fffafa;
+}
+
+/* layout */
+html {
+	scroll-behavior: smooth;
+	text-align: left;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans',
+		source-sans-pro, sans-serif;
+	font-weight: 400;
+}
+
+body,
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+body {
+	justify-content: flex-start;
+	min-height: 100vh;
+	color: var(--text);
+	background-color: var(--background);
+	border-top: 3px solid var(--accent);
+	border-bottom: 3px solid var(--accent);
+}
+
+section {
+	justify-content: center;
+	max-width: var(--max);
+	padding: var(--g2);
+}
